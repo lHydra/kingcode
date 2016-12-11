@@ -1,0 +1,11 @@
+<h1 id="page_title">Say Meow</h1>
+<div class="wrapper_padding skinny_wrapper">
+  <%= simple_form_for @contact_form do |f| %>
+    <%= f.input :name, require: true %>
+    <%= f.input :email, require: true %>
+    <%= f.input :message, as: :text, require: true %>
+    <div id="button_div">
+      <%= f.button :submit, 'Send Message', class: 'button' %>
+    </div>
+  <% end %>
+</div>
