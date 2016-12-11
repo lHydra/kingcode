@@ -1,6 +1,5 @@
 class Contact < ApplicationRecord
   include MailForm::Delivery
-
   attributes :name, :email, :message
 
   def headers
