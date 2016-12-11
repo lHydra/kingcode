@@ -1,7 +1,6 @@
 class Contact < ApplicationRecord
   include MailForm::Delivery
 
-  append :remote_ip, :user_agent, :session
   attributes :name, :email, :message
 
   def headers
