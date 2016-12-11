@@ -7,7 +7,7 @@ class Contact < ApplicationRecord
   def headers
     {
       to: 'g3orge.miller@gmail.com',
-      from: %("#{name}" <#{email}>)
+      from: %("#{name}" <#{email}>),
       subject: 'Hello! From KingCode' 
     }
   end
