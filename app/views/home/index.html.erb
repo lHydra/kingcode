@@ -1,0 +1,29 @@
+<div class="clearfix wrapper wrapper_padding">
+  <div class="col-1 about home_content">
+    <h2>About me</h2>
+    <hr>
+    <p>I'm Ruby on Rails developer living in Saint-Petersburg, Russia.
+    <p>My road has begun in 2014, when I started to take the course for Ruby in <a href="http://rubyschool.us">RubySchool</a>.
+    I has been interested the back-end since that time.</p>
+    <p>I have had long breaks due to study, but now i have enough free time, so I actively continue way in developing.
+    You cab find examples of my code on <a href="http://github.com/lHydra">GitHub</a>, and here you can see how I improve my skills and learn new technologies</p>
+  </div>
+  <div class="col-2 home_content">
+    <h2>Articles</h2>
+    <hr>
+    <% @articles.each do |article| %>
+      <h3><a href="<%= article_path(article.id) %>"><%= article.title %></a></h3>
+      <p class="date"><%= article.updated_at.strftime("%dth %B of %Y") %></p>
+    <% end %>
+  </div>
+  <div class="col-3 home_content">
+    <h2>Projects</h2>
+    <hr>
+    <h3><a href="#">Books Store</a></h3>
+    <p class="date">9th December of 2016</p>
+    <h3><a href="#">Time record</a></h3>
+    <p class="date">9th December of 2016</p>
+    <h3><a href="#">Something</a></h3>
+    <p class="date">9th December of 2016</p>
+  </div>
+</div>
