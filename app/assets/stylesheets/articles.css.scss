@@ -1,0 +1,52 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$dark: #424652;
+$light: #9a9da4;
+$highlight: #8bc6db;
+$border: #E9E9E9;
+
+#article_wrapper {
+  padding: 1em 0;
+  text-align: center;
+  .date {
+    font-size: .8em;
+    margin: 0;
+  }
+
+  h2 {
+    a {
+      color: $dark;
+      text-decoration: none;
+      &:hover {
+	color: $highlight;
+      }
+    }
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 1.8em;
+  }
+
+  hr {
+    margin: 2.3em auto;
+  }
+}
+
+#manage {
+  .m_button {
+    float: right;
+    padding: .6em .5em;
+    text-decoration: none;
+    color: $dark;
+    margin: 0 .3em;
+    border: 1px solid $border;
+    &:hover {
+      color: $highlight;
+      border: 1px solid $highlight;
+    }
+  }
+}
+
+#content {
+  text-align: justify;
+}

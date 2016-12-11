@@ -1,0 +1,10 @@
+<h1 id="page_title">Stuff I've written</h1>
+<div id="article_wrapper" class="skinny_wrapper">
+  <% @articles.each do |article| %>
+    <div class="article">
+      <p class="date"><%= article.updated_at.strftime("%d %B") %></p>
+      <h2><a href="<%= article_path(article.id) %>"><%= article.title %></a></h2>
+      <hr>
+    </div>
+  <% end %>
+</div>
