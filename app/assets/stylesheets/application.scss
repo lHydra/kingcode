@@ -1,0 +1,256 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+@import 'normalize';
+@import 'homepage';
+@import 'articles'; 
+@import 'pygments';
+
+$dark: #424652;
+$light: #9a9da4;
+$highlight: #8bc6db;
+$border: #E9E9E9;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: '';
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+.wrapper_padding {
+  padding: 40px 0;
+} 
+
+.skinny_wrapper {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 800px;
+}
+
+// - - - - - navbar
+
+#main_nav {
+  padding: 1.5em 5%;
+  border-bottom: 1px solid $border;
+  .name {
+    font-weight: 700;
+    font-size: .8em;
+    text-transform: uppercase;
+    border: 2px solid $border;
+    padding: 0.85em 1rem;
+    letter-spacing: 3.5px;
+    text-decoration: none;
+    color: $dark;
+    float: left;
+  }
+  nav {
+    float: right;
+    padding-top: .9rem;
+    a {
+      color: $dark;
+      text-decoration: none;
+      margin: 0 1rem;
+      &:hover {
+	color: $highlight;
+      }
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li {
+  color: $dark;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.85rem;
+}
+
+h3 {
+  font-size: 1.55rem;
+}
+
+h4 {
+  font-size: 1.375rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p, li {
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+
+p, ol, ul {
+  margin: 0 0 1.6em 0;
+}
+
+hr {
+  display: block;
+  width: 4em;
+  border: 0;
+  border-top: 2px solid $highlight;
+  margin: 1.3rem 0;
+}
+
+// - - - - - footer
+
+#footer {
+  margin-top: 1em;
+  padding: 1em 5%;
+  border-top: 1px solid $border;
+  .copyright {
+    padding-top: .4em;
+    float: left;
+    font-size: .9em;
+  }
+  nav {
+    padding-top: .4em;
+    float: right;
+    i {
+      color: $dark;
+      margin-left: 1em;
+      padding-top: .2em;
+      &:hover {
+	color: $highlight;
+      }
+    }
+  }
+}
+
+#page_title {
+  text-align: center;
+  border-bottom: 1px solid $border;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 2em 0;
+}
+
+// - - - - - contact page
+
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  max-width: 100%;
+  height: 3em;
+  border: 2px solid $border;
+  padding: 0 1em;
+  margin: .5em 0 2em 0;
+}
+
+textarea {
+  min-height: 15em;
+}
+
+input[type="submit"], .button {
+  border: 2px solid $border;
+  padding: 1em 0.5em;
+  background: transparent;
+  font-size: 1em;
+  color: $dark;
+  &:hover {
+    color: $highlight;
+    border: 2px solid $highlight;
+    cursor:pointer;
+  }
+}
+
+#button_div {
+  text-align: center;
+}
+
+// - - - - - article show
+
+#article_show_page {
+  text-align: center;
+  .date {
+    font-size: .85em;
+    color: $light;
+    margin: 0;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  hr {
+    margin: 2em auto;
+  }
+}
+
+#share_box {
+  p {
+    font-size: .9em;
+    margin-bottom: 1em;
+  }
+  a {
+    margin: 0 .95em;
+    color: $dark;
+    text-decoration: none;
+    &:hover {
+    color: $highlight;
+    }
+  }
+
+  hr {
+    margin-bottom: 0;
+  }
+}
+
+// - - - - - pagination
+
+.first, .prev, .page, .next, .last {
+  border: 1px solid $border;
+  padding: .3em .4em;
+  margin: .25em;
+  &:hover {
+    border: 1px solid $highlight;
+    cursor:pointer;
+  }
+
+  a {
+    text-decoration: none;
+    color: $dark;
+    &:hover {
+      color: $highlight;
+    }
+  }
+}
