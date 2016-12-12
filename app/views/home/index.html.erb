@@ -19,11 +19,9 @@
   <div class="col-3 home_content">
     <h2>Projects</h2>
     <hr>
-    <h3><a href="#">Books Store</a></h3>
-    <p class="date">9th December of 2016</p>
-    <h3><a href="#">Time record</a></h3>
-    <p class="date">9th December of 2016</p>
-    <h3><a href="#">Something</a></h3>
-    <p class="date">9th December of 2016</p>
+    <% @projects.each do |project| %>
+      <h3><a href="<%= project_path(project.id) %>"><%= project.title %></a></h3>
+      <p class="date"><%= project.updated_at.strftime("%dth %B of %Y") %></p>
+    <% end %>
   </div>
 </div>

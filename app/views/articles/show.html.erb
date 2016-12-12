@@ -9,7 +9,7 @@
   <hr>
 
   <div id="share_box">
-    <p>How i make Blog</p> 
+    <p><%= @article.title %></p> 
     <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
     <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
     <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
@@ -21,5 +21,4 @@
     <%= link_to 'Edit', edit_article_path(@article.id), class: 'm_button' %>
   </div>
   
-
 </div> 

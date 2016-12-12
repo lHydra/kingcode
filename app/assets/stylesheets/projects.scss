@@ -1,0 +1,25 @@
+// Place all the styles related to the projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$highlight: #8bc6db;
+$dark: #424652;
+$border: #E9E9E9;
+
+#content {
+  #link_div {
+    text-align: center;
+    margin: 2.5em auto;
+
+    #link {
+      background: $highlight;
+      border-radius: 30px;
+      padding: .9em 2.5em;
+      text-decoration: none;
+      color: $dark;
+      &:hover {
+	color: white;
+	border: 2px solid $border;
+      }
+    }
+  }
+}
