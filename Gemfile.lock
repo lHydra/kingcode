@@ -38,6 +38,8 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    addressable (2.5.0)
+      public_suffix (~> 2.0, >= 2.0.2)
     arel (7.1.4)
     builder (3.2.2)
     byebug (9.0.6)
@@ -90,11 +92,15 @@ GEM
       mini_portile2 (~> 2.1.0)
     pg (0.19.0)
     posix-spawn (0.3.12)
+    public_suffix (2.0.4)
     puma (3.6.2)
     pygments.rb (0.6.3)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.2.0)
     rack (2.0.1)
+    rack-canonical-host (0.2.2)
+      addressable (> 0, < 3)
+      rack (>= 1.0.0, < 3)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.0.1)
@@ -185,6 +191,7 @@ DEPENDENCIES
   pg (~> 0.18)
   puma (~> 3.0)
   pygments.rb
+  rack-canonical-host
   rails (~> 5.0.0, >= 5.0.0.1)
   redcarpet
   sass-rails (~> 5.0)
