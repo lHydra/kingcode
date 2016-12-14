@@ -1,0 +1,27 @@
+<div id="article_show_page" class="wrapper_padding skinny_wrapper">
+  <p class="date"><%= @project.updated_at.strftime("%d %B") %></p>
+  <h1><%= @project.title %></h1>
+  <hr>
+  <div id="content">
+    <%= markdown(@project.description) %>
+    <div id="link_div">
+      <%= link_to 'Link to my project', @project.link, id: 'link'%> 
+    </div>
+  </div>
+  
+  <hr>
+
+  <div id="share_box">
+    <p><%= @project.title %></p> 
+    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+    <hr>
+  </div>
+  
+  <div id="manage">
+    <%= link_to 'Delete', @project, class: 'm_button', method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'Edit', edit_project_path(@project.id), class: 'm_button' %>
+  </div>
+  
+</div> 
