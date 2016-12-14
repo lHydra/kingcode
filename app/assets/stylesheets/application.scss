@@ -11,6 +11,11 @@
  * It is generally better to create a new file per style scope.
  *
  */
+$dark: #424652;
+$light: #9a9da4;
+$highlight: #8bc6db;
+$border: #E9E9E9;
+
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 @import 'normalize';
@@ -18,11 +23,6 @@
 @import 'articles'; 
 @import 'pygments';
 @import 'projects';
-
-$dark: #424652;
-$light: #9a9da4;
-$highlight: #8bc6db;
-$border: #E9E9E9;
 
 * {
   box-sizing: border-box;
@@ -197,7 +197,7 @@ input[type="submit"], .button {
   text-align: center;
 }
 
-// - - - - - article show
+// - - - - - article and project show
 
 #article_show_page {
   text-align: center;
