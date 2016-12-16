@@ -12,7 +12,7 @@
     <h2>Articles</h2>
     <hr>
     <% @articles.each do |article| %>
-      <h3><a href="<%= article_path(article.id) %>"><%= article.title %></a></h3>
+      <h3><a href="<%= article_path(article) %>"><%= article.title %></a></h3>
       <p class="date"><%= article.updated_at.strftime("%dth %B of %Y") %></p>
     <% end %>
   </div>
@@ -20,7 +20,7 @@
     <h2>Projects</h2>
     <hr>
     <% @projects.each do |project| %>
-      <h3><a href="<%= project_path(project.id) %>"><%= project.title %></a></h3>
+      <h3><a href="<%= project_path(project) %>"><%= project.title %></a></h3>
       <p class="date"><%= project.updated_at.strftime("%dth %B of %Y") %></p>
     <% end %>
   </div>

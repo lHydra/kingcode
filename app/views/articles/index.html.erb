@@ -3,7 +3,7 @@
   <% @articles.each do |article| %>
     <div class="article">
       <p class="date"><%= article.updated_at.strftime("%d %B") %></p>
-      <h2><a href="<%= article_path(article.id) %>"><%= article.title %></a></h2>
+      <h2><a href="<%= article_path(article) %>"><%= article.title %></a></h2>
       <hr>
     </div>
   <% end %>
