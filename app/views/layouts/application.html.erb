@@ -11,13 +11,16 @@
   <body>
     <header id="main_nav" class="clearfix">
       <a class="name" href="<%= root_path %>">
-	<i class="fa fa-desktop" aria-hidden="true"></i>
-	KingCode
+	      <i class="fa fa-desktop" aria-hidden="true"></i>
+	      KingCode
       </a>
       <nav>
-	<a href="<%= articles_path %>">Articles</a>
-	<a href="<%= projects_path %>">Projects</a>
-	<a href="<%= new_contact_path %>">Contact</a>
+      	<a href="<%= articles_path %>">Articles</a>
+      	<a href="<%= projects_path %>">Projects</a>
+      	<a href="<%= new_contact_path %>">Contact</a>
+        <% if current_user %>
+          <%= link_to 'Logout', logout_path %>
+        <% end %>
       </nav>
     </header>
     <%= yield %>

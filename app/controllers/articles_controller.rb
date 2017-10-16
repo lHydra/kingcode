@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :find_article, only: [:show, :update, :edit, :destroy]
+  before_action :authorize, except: [:show, :index]
 
   def index
     @articles = Article.order('created_at DESC').page(params[:page]).per(5)
@@ -7,14 +8,14 @@ class ArticlesController < ApplicationController
 
   def show
   end
-  
+
   def new
     @article = Article.new
   end
 
   def create
     @article = Article.new(article_params)
-    
+
     if @article.save
       redirect_to @article, notice: 'Article was succesfull created'
     else
@@ -24,7 +25,7 @@ class ArticlesController < ApplicationController
 
   def edit
   end
-  
+
   def update
     if @article.update(article_params)
       redirect_to @article, notice: 'Article was succesfull updated'

@@ -5,24 +5,26 @@
   <div id="content">
     <%= markdown(@project.description) %>
     <div id="link_div">
-      <%= link_to 'Link to my project', @project.link, id: 'link'%> 
+      <%= link_to 'Link to my project', @project.link, id: 'link'%>
     </div>
   </div>
-  
+
   <hr>
 
   <div id="share_box">
-    <p>Shared the <%= @project.title %></p> 
+    <p>Shared the <%= @project.title %></p>
     <a href="#" onclick="javascript:window.open('https://twitter.com/share?text=<%= @project.title %> by @OmgGoG - ', '_blank', 'width=800, height=500, top=200, left=300');"><i class="fa fa-twitter" aria-hidden="true"></i></a>
     <a href="#" onclick="javascript:window.open('https://facebook.com/sharer/sharer.php?u=<%= project_url %>&title=<%= @project.title %>', '_blank', 'width=800, height=500, top=200, left=300');"><i class="fa fa-facebook" aria-hidden="true"></i></a>
     <a href="#" onclick="javascript:window.open('https://plus.google.com/share?url=<%= project_url %>', '_blank', 'width=800, height=500, top=200, left=300');"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
     <hr>
   </div>
-  
-  <div id="manage">
-    <%= link_to 'Delete', @project, class: 'm_button', method: :delete, data: { confirm: 'Are you sure?' } %>
-    <%= link_to 'Edit', edit_project_path(@project), class: 'm_button' %>
-  </div>
-  
+
+  <% if current_user %>
+    <div id="manage">
+      <%= link_to 'Delete', @project, class: 'm_button', method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to 'Edit', edit_project_path(@project), class: 'm_button' %>
+    </div>
+  <% end %>
+
   <%= render 'comments' %>
-</div> 
+</div>
