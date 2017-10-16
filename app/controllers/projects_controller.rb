@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :find_project, only: [:show, :update, :edit, :destroy]
+  before_action :authorize, except: [:show, :index]
 
   def index
     @projects = Project.order('created_at DESC').page(params[:page]).per(5)
@@ -7,14 +8,14 @@ class ProjectsController < ApplicationController
 
   def show
   end
-  
+
   def new
     @project = Project.new
   end
 
   def create
     @project = Project.new(project_params)
-    
+
     if @project.save
       redirect_to @project, notice: 'Project was succesfull created'
     else
@@ -24,7 +25,7 @@ class ProjectsController < ApplicationController
 
   def edit
   end
-  
+
   def update
     if @project.update(project_params)
       redirect_to @project, notice: 'Project was succesfull updated'
