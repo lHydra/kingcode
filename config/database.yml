@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: kingcode_production
-  username: kingcode
+  username: rails
   password: <%= ENV['KINGCODE_DATABASE_PASSWORD'] %>
