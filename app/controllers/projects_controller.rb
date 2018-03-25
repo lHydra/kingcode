@@ -1,13 +1,12 @@
 class ProjectsController < ApplicationController
-  before_action :find_project, only: [:show, :update, :edit, :destroy]
-  before_action :authorize, except: [:show, :index]
+  before_action :find_project, only: %i[show update edit destroy]
+  before_action :authorize, except: %i[show index]
 
   def index
     @projects = Project.order('created_at DESC').page(params[:page]).per(5)
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @project = Project.new
@@ -23,8 +22,7 @@ class ProjectsController < ApplicationController
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @project.update(project_params)
