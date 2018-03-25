@@ -4,32 +4,39 @@
     <title>KingCode</title>
     <%= csrf_meta_tags %>
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <header id="main_nav" class="clearfix">
-      <a class="name" href="<%= root_path %>">
-	      <i class="fa fa-desktop" aria-hidden="true"></i>
-	      KingCode
+    <header id='main_nav' class='clearfix'>
+      <a class='name' href="<%= root_path %>">
+        <i class='fa fa-desktop' aria-hidden='true'></i>
+        KingCode
       </a>
       <nav>
-      	<a href="<%= articles_path %>">Articles</a>
-      	<a href="<%= projects_path %>">Projects</a>
-      	<a href="<%= new_contact_path %>">Contact</a>
+        <a href="<%= articles_path %>">Articles</a>
+        <a href="<%= projects_path %>">Projects</a>
+        <a href="<%= new_contact_path %>">Contact</a>
         <% if current_user %>
           <%= link_to 'Logout', logout_path %>
         <% end %>
       </nav>
     </header>
     <%= yield %>
-    <footer id="footer">
-      <p class="copyright">&copy;2016 KingCode</p>
+    <footer id='footer'>
+      <p class="copyright"><i class="far fa-copyright"></i> 2018 - KingCode
+      </p>
       <nav>
-	<a href="http://twitter.com/OmgGoG" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-	<a href="http://github.com/lHydra" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
-	<a href="http://vk.com/OmgGoG" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i></a>
+        <a href="http://twitter.com/OmgGoG" target="_blank">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="http://github.com/lHydra" target="_blank">
+          <i class="fab fa-github-alt" aria-hidden="true"></i>
+        </a>
+        <a href="http://vk.com/OmgGoG" target="_blank">
+          <i class="fab fa-vk" aria-hidden="true"></i>
+        </a>
       </nav>
     </footer>
   </body>
