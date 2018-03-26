@@ -1,7 +1,7 @@
 <div class="clearfix wrapper wrapper_padding">
   <div class="col-1 about home_content">
     <h2>About me</h2>
-    <hr>
+    <hr class="title-hr">
     <p>I'm Ruby on Rails developer living in Saint-Petersburg, Russia.
     <p>My road has begun in 2014, when I started to take the course for Ruby in <a href="http://rubyschool.us">RubySchool</a>.
     I has been interested the back-end since that time.</p>
@@ -10,7 +10,7 @@
   </div>
   <div class="col-2 home_content">
     <h2>Articles</h2>
-    <hr>
+    <hr class="title-hr">
     <% @articles.each do |article| %>
       <h3><a href="<%= article_path(article) %>"><%= article.title %></a></h3>
       <p class="date"><%= article.updated_at.strftime("%dth %B of %Y") %></p>
@@ -18,7 +18,7 @@
   </div>
   <div class="col-3 home_content">
     <h2>Projects</h2>
-    <hr>
+    <hr class="title-hr">
     <% @projects.each do |project| %>
       <h3><a href="<%= project_path(project) %>"><%= project.title %></a></h3>
       <p class="date"><%= project.updated_at.strftime("%dth %B of %Y") %></p>

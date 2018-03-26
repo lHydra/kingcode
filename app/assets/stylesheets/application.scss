@@ -95,11 +95,15 @@ h1 {
 }
 
 h2 {
+  border-bottom: 1px solid #eaecef;
   font-size: 1.85rem;
+  padding-bottom: 0.3em;
 }
 
 h3 {
+  border-bottom: 1px solid #eaecef;
   font-size: 1.55rem;
+  padding-bottom: 0.3em;
 }
 
 h4 {
@@ -123,7 +127,7 @@ p, ol, ul {
   margin: 0 0 1.6em 0;
 }
 
-hr {
+.title-hr {
   display: block;
   width: 4em;
   border: 0;

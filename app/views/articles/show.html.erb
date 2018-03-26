@@ -1,19 +1,19 @@
 <div id="article_show_page" class="wrapper_padding skinny_wrapper">
   <p class="date"><%= @article.updated_at.strftime("%d %B") %></p>
   <h1><%= @article.title %></h1>
-  <hr>
+  <hr class="title-hr">
   <div id="content">
     <%= markdown(@article.body) %>
   </div>
 
-  <hr>
+  <hr class="title-hr">
 
   <div id="share_box">
     <p>Shared the <%= @article.title %></p>
     <a href="#" onclick="javascript:window.open('https://twitter.com/share?text=<%= @article.title %> by @OmgGoG - ', '_blank', 'width=800, height=500, top=200, left=300');"><i class="fab fa-twitter" aria-hidden="true"></i></a>
     <a href="#" onclick="javascript:window.open('https://facebook.com/sharer/sharer.php?u=<%= article_url %>&title=<%= @article.title %>', '_blank', 'width=800, height=500, top=200, left=300');"><i class="fab fa-facebook" aria-hidden="true"></i></a>
     <a href="#" onclick="javascript:window.open('https://plus.google.com/share?url=<%= article_url %>', '_blank', 'width=800, height=500, top=200, left=300');"><i class="fab fa-google-plus" aria-hidden="true"></i></a>
-    <hr>
+    <hr class="title-hr">
   </div>
 
   <% if current_user %>

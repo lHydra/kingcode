@@ -4,7 +4,7 @@
     <div class="article">
       <p class="date"><%= project.updated_at.strftime("%d %B") %></p>
       <h2><a href="<%= project_path(project) %>"><%= project.title %></a></h2>
-      <hr>
+      <hr class="title-hr">
     </div>
   <% end %>
   <%= paginate @projects %>
