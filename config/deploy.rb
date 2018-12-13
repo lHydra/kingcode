@@ -1,5 +1,5 @@
 # Change these
-server '46.101.24.61', port: 25675, roles: [:web, :app, :db], primary: true
+server '178.128.206.98', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:lHydra/kingcode.git'
 set :application,     'kingcode'
